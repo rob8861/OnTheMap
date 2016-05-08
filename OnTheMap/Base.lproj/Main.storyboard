@@ -52,9 +52,9 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="60n-t7-64q"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="Login"/>
                                         <connections>
-                                            <segue destination="xLi-kf-8v0" kind="show" id="KRz-WA-8zc"/>
+                                            <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ucy-CD-f2u"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y20-1d-nL9">
@@ -77,6 +77,10 @@
                             <constraint firstItem="vs5-Mc-aX6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="vo6-dZ-3wl"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="email" destination="wnL-97-F7f" id="Ihu-XF-Abr"/>
+                        <outlet property="password" destination="25M-L9-93C" id="4g5-rV-fXI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -85,15 +89,15 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Lt7-xe-YcU">
             <objects>
-                <tabBarController id="xLi-kf-8v0" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="ManagerTabViewController" id="xLi-kf-8v0" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="TwE-3l-VZV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="paS-h0-zgf" kind="relationship" relationship="viewControllers" id="uxL-DO-jlh"/>
-                        <segue destination="Gdx-Q6-UiB" kind="relationship" relationship="viewControllers" id="6te-q9-sOD"/>
+                        <segue destination="Gdx-Q6-UiB" kind="relationship" relationship="viewControllers" id="QbX-fP-Ss9"/>
+                        <segue destination="paS-h0-zgf" kind="relationship" relationship="viewControllers" id="jdh-AW-cbf"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ay-aS-RcT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -103,7 +107,7 @@
         <!--Item-->
         <scene sceneID="BNT-5w-Mlg">
             <objects>
-                <viewController id="paS-h0-zgf" sceneMemberID="viewController">
+                <viewController id="paS-h0-zgf" customClass="StudentListViewController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zpM-EB-F6V"/>
                         <viewControllerLayoutGuide type="bottom" id="SpS-qU-Z4t"/>
@@ -116,7 +120,11 @@
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="On The Map" id="thy-03-lWE">
-                                        <barButtonItem key="leftBarButtonItem" image="pin-32" id="WGN-gV-PGZ"/>
+                                        <barButtonItem key="leftBarButtonItem" image="pin-32" id="WGN-gV-PGZ">
+                                            <connections>
+                                                <segue destination="Syb-dF-AEg" kind="show" id="bAg-cL-lMR"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="o3R-zT-ayB"/>
                                     </navigationItem>
                                 </items>
@@ -147,10 +155,6 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="paS-h0-zgf" id="yjA-7l-sZT"/>
-                                    <outlet property="delegate" destination="paS-h0-zgf" id="38Q-PI-Pmj"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -174,7 +178,7 @@
         <!--Item-->
         <scene sceneID="Cs4-R0-1a6">
             <objects>
-                <viewController id="Gdx-Q6-UiB" sceneMemberID="viewController">
+                <viewController id="Gdx-Q6-UiB" customClass="MapKitViewController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oTe-xE-Ndb"/>
                         <viewControllerLayoutGuide type="bottom" id="Jtc-T3-VDN"/>
@@ -186,11 +190,12 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Gc-6n-ymL">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
-                                    <navigationItem id="vU9-sx-sbV">
-                                        <string key="title" base64-UTF8="YES">
-EE9uIFRoZSBNYXA
-</string>
-                                        <barButtonItem key="leftBarButtonItem" image="pin-32" id="i6B-f1-Jx9"/>
+                                    <navigationItem title="On The Map" id="vU9-sx-sbV">
+                                        <barButtonItem key="leftBarButtonItem" image="pin-32" id="i6B-f1-Jx9">
+                                            <connections>
+                                                <segue destination="Syb-dF-AEg" kind="show" id="hZc-9s-qwt"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="dhd-RP-bis"/>
                                     </navigationItem>
                                 </items>
@@ -296,6 +301,9 @@ EE9uIFRoZSBNYXA
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PEO-zo-QMJ">
                                                 <rect key="frame" x="245" y="82" width="111" height="30"/>
                                                 <state key="normal" title="Find on the map"/>
+                                                <connections>
+                                                    <segue destination="vcb-E1-rB7" kind="show" id="PtN-1T-wic"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -403,4 +411,7 @@ EE9uIFRoZSBNYXA
         <image name="map-32" width="32" height="32"/>
         <image name="pin-32" width="32" height="32"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="bAg-cL-lMR"/>
+    </inferredMetricsTieBreakers>
 </document>
