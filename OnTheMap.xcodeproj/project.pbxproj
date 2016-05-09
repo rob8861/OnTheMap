@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B00770F1CE02DE300EEB393 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B00770E1CE02DE300EEB393 /* Student.swift */; };
 		7B6C83801CDEE00C00A3EC9C /* MapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6C837F1CDEE00C00A3EC9C /* MapKitViewController.swift */; };
 		7B6C83821CDEE05A00A3EC9C /* StudentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6C83811CDEE05A00A3EC9C /* StudentListViewController.swift */; };
 		7B6C83841CDEE51800A3EC9C /* GCDBlackBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6C83831CDEE51800A3EC9C /* GCDBlackBox.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B00770E1CE02DE300EEB393 /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		7B6C837F1CDEE00C00A3EC9C /* MapKitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapKitViewController.swift; sourceTree = "<group>"; };
 		7B6C83811CDEE05A00A3EC9C /* StudentListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentListViewController.swift; sourceTree = "<group>"; };
 		7B6C83831CDEE51800A3EC9C /* GCDBlackBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCDBlackBox.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				7B6C83831CDEE51800A3EC9C /* GCDBlackBox.swift */,
 				7B6C83851CDEE52C00A3EC9C /* OTMConstants.swift */,
 				7B6C83871CDEE79A00A3EC9C /* OTMClient.swift */,
+				7B00770E1CE02DE300EEB393 /* Student.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 				7B6C83881CDEE79A00A3EC9C /* OTMClient.swift in Sources */,
 				7BB391F91CDB039800513D6A /* AppDelegate.swift in Sources */,
 				7B6C83841CDEE51800A3EC9C /* GCDBlackBox.swift in Sources */,
+				7B00770F1CE02DE300EEB393 /* Student.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

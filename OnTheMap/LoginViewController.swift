@@ -27,7 +27,7 @@ class LoginViewController: UIViewController {
         
         let client = OTMClient.sharedInstance()
         
-        let json = "{\"udacity\": {\"\(OTMConstants.ParamterKeys.Username)\": \"\(email.text!)\", \"\(OTMConstants.ParamterKeys.Password)\": \"\(password.text!)\"}}"
+        let json = "{\"udacity\": {\"\(OTMConstants.Keys.Username)\": \"\(email.text!)\", \"\(OTMConstants.Keys.Password)\": \"\(password.text!)\"}}"
         
         client.taskForPOSTMethod("", parameters: [:], jsonBody: json) { (result, error) in
             
@@ -50,11 +50,18 @@ class LoginViewController: UIViewController {
                 return
             }
             
-            var sessionDic = result[OTMConstants.ParamterKeys.Session] as? [String:String]
-            client.udacitySessionID = sessionDic![OTMConstants.ParamterKeys.Id]
-            print(sessionDic)
+            var sessionDic = result[OTMConstants.Keys.Session] as? [String:String]
+            client.udacitySessionID = sessionDic![OTMConstants.Keys.Id]
+            performUIUpdatesOnMain({ 
+                self.loginCompleted()
+            })
         }
         
+    }
+    
+    private func loginCompleted() {
+        let controller = storyboard!.instantiateViewControllerWithIdentifier("ManagerTabViewController") as! UITabBarController
+        presentViewController(controller, animated: true, completion: nil)
     }
 
 }
