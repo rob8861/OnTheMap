@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B00770F1CE02DE300EEB393 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B00770E1CE02DE300EEB393 /* Student.swift */; };
+		7B6C83801CDEE00C00A3EC9C /* MapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6C837F1CDEE00C00A3EC9C /* MapKitViewController.swift */; };
+		7B6C83821CDEE05A00A3EC9C /* StudentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6C83811CDEE05A00A3EC9C /* StudentListViewController.swift */; };
+		7B6C83841CDEE51800A3EC9C /* GCDBlackBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6C83831CDEE51800A3EC9C /* GCDBlackBox.swift */; };
+		7B6C83861CDEE52C00A3EC9C /* OTMConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6C83851CDEE52C00A3EC9C /* OTMConstants.swift */; };
+		7B6C83881CDEE79A00A3EC9C /* OTMClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6C83871CDEE79A00A3EC9C /* OTMClient.swift */; };
+		7B7D478F1CE2EA6C0007811F /* BorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7D478E1CE2EA6C0007811F /* BorderedButton.swift */; };
+		7B9CA7B61CE18D2200D7FC76 /* GeocodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9CA7B51CE18D2200D7FC76 /* GeocodeViewController.swift */; };
+		7B9CA7B81CE1944D00D7FC76 /* MapPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9CA7B71CE1944D00D7FC76 /* MapPreviewViewController.swift */; };
 		7BB391F91CDB039800513D6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB391F81CDB039800513D6A /* AppDelegate.swift */; };
 		7BB391FB1CDB039800513D6A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB391FA1CDB039800513D6A /* LoginViewController.swift */; };
 		7BB391FE1CDB039800513D6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BB391FC1CDB039800513D6A /* Main.storyboard */; };
@@ -15,6 +24,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B00770E1CE02DE300EEB393 /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		7B6C837F1CDEE00C00A3EC9C /* MapKitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapKitViewController.swift; sourceTree = "<group>"; };
+		7B6C83811CDEE05A00A3EC9C /* StudentListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentListViewController.swift; sourceTree = "<group>"; };
+		7B6C83831CDEE51800A3EC9C /* GCDBlackBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCDBlackBox.swift; sourceTree = "<group>"; };
+		7B6C83851CDEE52C00A3EC9C /* OTMConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTMConstants.swift; sourceTree = "<group>"; };
+		7B6C83871CDEE79A00A3EC9C /* OTMClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTMClient.swift; sourceTree = "<group>"; };
+		7B7D478E1CE2EA6C0007811F /* BorderedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedButton.swift; sourceTree = "<group>"; };
+		7B9CA7B51CE18D2200D7FC76 /* GeocodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeocodeViewController.swift; sourceTree = "<group>"; };
+		7B9CA7B71CE1944D00D7FC76 /* MapPreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPreviewViewController.swift; sourceTree = "<group>"; };
 		7BB391F51CDB039700513D6A /* OnTheMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTheMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BB391F81CDB039800513D6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BB391FA1CDB039800513D6A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +53,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B6C837D1CDEDFB800A3EC9C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7BB391FA1CDB039800513D6A /* LoginViewController.swift */,
+				7B6C837F1CDEE00C00A3EC9C /* MapKitViewController.swift */,
+				7B6C83811CDEE05A00A3EC9C /* StudentListViewController.swift */,
+				7B9CA7B51CE18D2200D7FC76 /* GeocodeViewController.swift */,
+				7B9CA7B71CE1944D00D7FC76 /* MapPreviewViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		7B6C837E1CDEDFC200A3EC9C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7B6C83831CDEE51800A3EC9C /* GCDBlackBox.swift */,
+				7B6C83851CDEE52C00A3EC9C /* OTMConstants.swift */,
+				7B6C83871CDEE79A00A3EC9C /* OTMClient.swift */,
+				7B00770E1CE02DE300EEB393 /* Student.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		7B7D478D1CE2EA520007811F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7B7D478E1CE2EA6C0007811F /* BorderedButton.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		7BB391EC1CDB039700513D6A = {
 			isa = PBXGroup;
 			children = (
@@ -54,8 +103,10 @@
 		7BB391F71CDB039800513D6A /* OnTheMap */ = {
 			isa = PBXGroup;
 			children = (
+				7B7D478D1CE2EA520007811F /* Views */,
+				7B6C837E1CDEDFC200A3EC9C /* Models */,
+				7B6C837D1CDEDFB800A3EC9C /* Controllers */,
 				7BB391F81CDB039800513D6A /* AppDelegate.swift */,
-				7BB391FA1CDB039800513D6A /* LoginViewController.swift */,
 				7BB391FC1CDB039800513D6A /* Main.storyboard */,
 				7BB391FF1CDB039800513D6A /* Assets.xcassets */,
 				7BB392011CDB039800513D6A /* LaunchScreen.storyboard */,
@@ -136,8 +187,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B6C83861CDEE52C00A3EC9C /* OTMConstants.swift in Sources */,
+				7B6C83821CDEE05A00A3EC9C /* StudentListViewController.swift in Sources */,
+				7B6C83801CDEE00C00A3EC9C /* MapKitViewController.swift in Sources */,
 				7BB391FB1CDB039800513D6A /* LoginViewController.swift in Sources */,
+				7B6C83881CDEE79A00A3EC9C /* OTMClient.swift in Sources */,
 				7BB391F91CDB039800513D6A /* AppDelegate.swift in Sources */,
+				7B7D478F1CE2EA6C0007811F /* BorderedButton.swift in Sources */,
+				7B9CA7B81CE1944D00D7FC76 /* MapPreviewViewController.swift in Sources */,
+				7B6C83841CDEE51800A3EC9C /* GCDBlackBox.swift in Sources */,
+				7B9CA7B61CE18D2200D7FC76 /* GeocodeViewController.swift in Sources */,
+				7B00770F1CE02DE300EEB393 /* Student.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +347,7 @@
 				7BB392091CDB039800513D6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
