@@ -20,6 +20,7 @@ struct OTMConstants {
         static let Session = "session"
         static let Id = "id"
         
+        
         static let Results = "results"
         
         static let FirstName = "firstName"
@@ -27,11 +28,22 @@ struct OTMConstants {
         static let MediaURL = "mediaURL"
         static let Latitude = "latitude"
         static let Longitude = "longitude"
-        
+        static let UniqueKey = "uniqueKey"
     }
     
     struct Methods {
         
         static let StudentsURL = "https://api.parse.com/1/classes/StudentLocation"
+        static let CurrentUserURL = "https://www.udacity.com/api/users/me"
+        static let UserURL = "https://www.udacity.com/api/users/"
+    }
+    
+    struct UdacityKeys {
+        
+        static let User = "user"
+        static let FirstName = "first_name"
+        static let LastName = "last_name"
+        static let UserID = "key"
+        
     }
 }

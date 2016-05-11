@@ -15,12 +15,14 @@ struct Student {
     var mediaURL: String
     var latitude: Double
     var longitude: Double
+    var uniqueKey: String
     
-    init(firstName: String, lastName: String, mediaURL: String, latitude: Double, longitude: Double) {
+    init(firstName: String, lastName: String, mediaURL: String, latitude: Double, longitude: Double, uniqueKey: String) {
         self.firstName = firstName
         self.lastName = lastName
         self.mediaURL = mediaURL
         self.latitude = latitude
         self.longitude = longitude
+        self.uniqueKey = uniqueKey
     }
 }

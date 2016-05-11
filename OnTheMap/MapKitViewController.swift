@@ -77,8 +77,9 @@ class MapKitViewController: UIViewController, MKMapViewDelegate {
             let mediaURL = student[OTMConstants.Keys.MediaURL] as? String
             let latitude = student[OTMConstants.Keys.Latitude] as? Double
             let longitude = student[OTMConstants.Keys.Longitude] as? Double
+            let uniqueKey = student[OTMConstants.Keys.UniqueKey] as? String
             
-            let aStudent = Student(firstName: firstName!, lastName: lastName!, mediaURL: mediaURL!, latitude: latitude!, longitude: longitude!)
+            let aStudent = Student(firstName: firstName!, lastName: lastName!, mediaURL: mediaURL!, latitude: latitude!, longitude: longitude!, uniqueKey: uniqueKey!)
             client.students.append(aStudent)
             
         }

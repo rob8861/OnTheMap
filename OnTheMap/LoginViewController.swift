@@ -52,8 +52,40 @@ class LoginViewController: UIViewController {
             
             var sessionDic = result[OTMConstants.Keys.Session] as? [String:String]
             client.udacitySessionID = sessionDic![OTMConstants.Keys.Id]
-            performUIUpdatesOnMain({ 
-                self.loginCompleted()
+            
+            // get the currect logged in user information
+            client.taskForGETMethod(OTMConstants.Methods.CurrentUserURL, completionHandlerForPOST: { (result, error) in
+                
+                func displayError(error: String) {
+                    performUIUpdatesOnMain({
+                        let controller = UIAlertController(title: "Login Error", message: error, preferredStyle: .Alert)
+                        controller.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+                        self.presentViewController(controller, animated: true, completion: nil)
+                    })
+                }
+                
+                if (error != nil) {
+                    // display an error message
+                    displayError((error?.localizedDescription)!)
+                    return
+                }
+                
+                if result == nil {
+                    displayError("Failed to parse data")
+                    return
+                }
+                
+                // extract the user infromation and store them in the client for later use
+                var userInfo = result[OTMConstants.UdacityKeys.User] as? [String:AnyObject]
+                
+                client.udacityFirstName = userInfo![OTMConstants.UdacityKeys.FirstName] as? String
+                client.udacityLastName = userInfo![OTMConstants.UdacityKeys.LastName] as? String
+                client.udacityUserID = userInfo![OTMConstants.UdacityKeys.UserID] as? String
+                
+                // complete the login process and present the next view controller.
+                performUIUpdatesOnMain({
+                    self.loginCompleted()
+                })
             })
         }
         
